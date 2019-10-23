@@ -10,6 +10,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import edu.eci.arsw.Airports.model.Airport;
 import edu.eci.arsw.Airports.persistence.AirportPersistence;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class AirportPersistenceImpl implements AirportPersistence{

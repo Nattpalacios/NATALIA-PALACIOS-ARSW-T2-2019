@@ -5,6 +5,8 @@ import edu.eci.arsw.Airports.persistence.impl.AirportPersistenceImpl;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class AirportServices {
