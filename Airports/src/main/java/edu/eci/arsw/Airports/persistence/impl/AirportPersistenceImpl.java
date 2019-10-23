@@ -13,9 +13,10 @@ import edu.eci.arsw.Airports.persistence.AirportPersistence;
 
 @Service
 public class AirportPersistenceImpl implements AirportPersistence{
-
+	@Singleton
     @Autowired
     private ConcurrentHashMap<String, Airport> aeropuertos = new ConcurrentHashMap<>();
+	@Singleton
     private ConcurrentHashMap<String, Long> tiempo =  new ConcurrentHashMap<>();
     private static final String USER_AGENT = "";
 
@@ -25,7 +26,7 @@ public class AirportPersistenceImpl implements AirportPersistence{
         if(aeropuertos.contains(ciudad)) {
             long ini = tiempo.get(ciudad);
             long fin = System.currentTimeMillis();
-            if(fin-ini <= 5) {
+            if(fin-ini <= 300000) {
                 aero.add(aeropuertos.get(ciudad));
             }else {
                 //conectar con api
