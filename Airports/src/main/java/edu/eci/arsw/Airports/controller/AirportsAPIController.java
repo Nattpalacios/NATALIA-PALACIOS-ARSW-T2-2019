@@ -26,7 +26,7 @@ public class AirportsAPIController {
         try {
             return new ResponseEntity<>(as.getAirportByName(name),HttpStatus.ACCEPTED);
         } catch (Exception e) {
-            Logger.getLogger(AirportAPIController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(AirportsAPIController.class.getName()).log(Level.SEVERE, null, e);
             return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
         }
     }

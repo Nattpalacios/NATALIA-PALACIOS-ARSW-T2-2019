@@ -11,14 +11,17 @@ import java.util.concurrent.ConcurrentHashMap;
 import edu.eci.arsw.Airports.model.Airport;
 import edu.eci.arsw.Airports.persistence.AirportPersistence;
 import org.springframework.stereotype.Service;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class AirportPersistenceImpl implements AirportPersistence{
-	@Singleton
-    @Autowired
+	//@Singleton
+    //@Autowired
     private ConcurrentHashMap<String, Airport> aeropuertos = new ConcurrentHashMap<>();
-	@Singleton
+	//@Singleton
     private ConcurrentHashMap<String, Long> tiempo =  new ConcurrentHashMap<>();
     private static final String USER_AGENT = "";
 
