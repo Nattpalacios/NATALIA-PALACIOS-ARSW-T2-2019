@@ -18,8 +18,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class AirportPersistenceImpl implements AirportPersistence{
-	
+	//@Singleton
+    //@Autowired
     private ConcurrentHashMap<String, Airport> aeropuertos = new ConcurrentHashMap<>();
+	//@Singleton
     private ConcurrentHashMap<String, Long> tiempo =  new ConcurrentHashMap<>();
     private static final String USER_AGENT = "";
 
