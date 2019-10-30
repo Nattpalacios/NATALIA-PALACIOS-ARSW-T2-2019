@@ -2,7 +2,8 @@ var module = (function () {
     var nombre = document.getElementById("inputCiudad");
     var aeropuertos = {};
 
-    var addRows = function(){
+    var addRows = function(aeropuertoss){
+        aeropuertos = aeropuertoss;
         for(var i = 0; i < aeropuertos.length; i++){
             var aeropuerto = aeropuertos[i];
             var code = aeropuerto.code;
@@ -20,14 +21,9 @@ var module = (function () {
 
     return {
         mostrarAeropuerto: function(){
-            apiclient.getAirportByName(nombre,alert)
-        },
-        actualizarAeropuertos: function () {
             $('#airports').find('tbody').empty();
             var nombre = $('#inputCiudad').val();
-            apiclient.getAirportByName(nombre,alert);
-            this.agregarInformacion();
-          },
-        agregarInformacion: addRows
+            apiclient.getAirportByName(nombre,addRows);
+        }
     }
   })();
