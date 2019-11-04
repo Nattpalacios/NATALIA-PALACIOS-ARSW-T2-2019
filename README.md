@@ -6,5 +6,5 @@ Para poder ejecutar el programa localmente, accedemos al siguiente path 'NATALIA
 
 ### Heroku
 
-https://git.heroku.com/nataliapalaciosarswt2.git
+https://nataliapalaciosarswt2.herokuapp.com/
 
